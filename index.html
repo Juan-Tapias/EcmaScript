@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de ECMAScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Guía Completa de ECMAScript</h1>
+        <p class="subtitle">Todo lo que necesitas saber sobre el estándar de JavaScript</p>
+    </header>
+    
+    <div class="container">
+        <section id="que-es">
+            <h2>¿Qué es ECMAScript?</h2>
+            <p>ECMAScript es el estándar sobre el cual se basa JavaScript. Es una especificación de lenguaje de programación publicada por ECMA International (European Computer Manufacturers Association).</p>
+            
+            <p>JavaScript es la implementación más popular de ECMAScript, pero no es la única. Otros lenguajes como ActionScript también implementan el estándar ECMAScript.</p>
+            
+            <p>ECMAScript define:</p>
+            <ul>
+                <li>La sintaxis del lenguaje</li>
+                <li>Los tipos de datos</li>
+                <li>Las estructuras de control</li>
+                <li>Las palabras reservadas</li>
+                <li>Los objetos y funciones incorporadas</li>
+                <li>Y más...</li>
+            </ul>
+            
+            <p>Los navegadores implementan el motor JavaScript siguiendo esta especificación para garantizar que el código funcione de la misma manera en todos ellos.</p>
+        </section>
+        
+        <section id="como-usar">
+            <h2>¿Cómo utilizar ECMAScript?</h2>
+            <p>Para utilizar ECMAScript en tus proyectos, simplemente escribe código JavaScript siguiendo las características disponibles en la versión que quieras usar.</p>
+            
+            <p>Consideraciones importantes:</p>
+            <ul>
+                <li><strong>Compatibilidad del navegador:</strong> No todos los navegadores soportan las últimas características de ECMAScript. Puedes verificar la compatibilidad en <a href="https://caniuse.com" target="_blank">Can I Use</a>.</li>
+                <li><strong>Transpilación:</strong> Herramientas como Babel permiten convertir código con nuevas características a versiones anteriores de JavaScript para mayor compatibilidad.</li>
+                <li><strong>Node.js:</strong> En el entorno de servidor con Node.js, puedes usar características más modernas dependiendo de la versión de Node.</li>
+            </ul>
+            
+            <div class="feature-card">
+                <div class="feature-title">Ejemplo básico de uso</div>
+                <p>Para usar ECMAScript en un navegador, simplemente incluye un archivo JavaScript o escribe código dentro de etiquetas <code>&lt;script&gt;</code>:</p>
+                
+                <div class="code-header">HTML</div>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Mi página con ES6&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+        </section>
+        
+        <section id="linea-tiempo">
+            <h2>Línea de tiempo de versiones</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 1997</div>
+                        <h3>ECMAScript 1</h3>
+                        <p>Primera edición del estándar ECMAScript. Estableció las bases del lenguaje.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 1998</div>
+                        <h3>ECMAScript 2</h3>
+                        <p>Pequeñas actualizaciones para alinear el estándar con el estándar ISO/IEC 16262.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Diciembre 1999</div>
+                        <h3>ECMAScript 3</h3>
+                        <p>Agregó expresiones regulares, manejo de excepciones (try/catch), más métodos para strings y arrays, y otras mejoras.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Julio 2008</div>
+                        <h3>ECMAScript 4</h3>
+                        <p>Nunca se lanzó oficialmente debido a desacuerdos sobre la dirección del lenguaje. Muchas de sus ideas se incorporaron más tarde en ES6.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Diciembre 2009</div>
+                        <h3>ECMAScript 5</h3>
+                        <p>Agregó "strict mode", métodos de array como forEach, map, filter, JSON nativo, y otras mejoras.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2011</div>
+                        <h3>ECMAScript 5.1</h3>
+                        <p>Pequeñas actualizaciones para alinear con la especificación ISO/IEC 16262:2011.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2015</div>
+                        <h3>ECMAScript 6 (ES2015)</h3>
+                        <p>Una gran actualización que agregó clases, módulos, promesas, arrow functions, template strings, let/const, y muchas otras características.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2016</div>
+                        <h3>ECMAScript 2016 (ES7)</h3>
+                        <p>Agregó el operador de exponenciación (**) y Array.prototype.includes.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2017</div>
+                        <h3>ECMAScript 2017 (ES8)</h3>
+                        <p>Agregó async/await, Object.values/Object.entries, relleno de strings y otras características.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2018</div>
+                        <h3>ECMAScript 2018 (ES9)</h3>
+                        <p>Agregó operadores rest/spread para objetos, iteración asíncrona, Promise.finally y otras mejoras.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2019</div>
+                        <h3>ECMAScript 2019 (ES10)</h3>
+                        <p>Agregó Array.flat, Array.flatMap, Object.fromEntries, trimStart/trimEnd y otras características.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2020</div>
+                        <h3>ECMAScript 2020 (ES11)</h3>
+                        <p>Agregó BigInt, operador de coalescencia nula (??), optional chaining (?.), Promise.allSettled y otras características.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2021</div>
+                        <h3>ECMAScript 2021 (ES12)</h3>
+                        <p>Agregó String.replaceAll, operadores lógicos de asignación (&&=, ||=, ??=), Promise.any y otras mejoras.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2022</div>
+                        <h3>ECMAScript 2022 (ES13)</h3>
+                        <p>Agregó campos privados en clases, métodos estáticos y privados, operador "in" para verificar propiedades privadas, at() para arrays/strings, y más.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Junio 2023</div>
+                        <h3>ECMAScript 2023 (ES14)</h3>
+                        <p>Agregó métodos toSorted, toReversed, toSpliced, findLast y findLastIndex para arrays, y otras mejoras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="diferencias">
+            <h2>Diferencias notorias entre versiones</h2>
+            
+            <h3>ES5 vs ES6 (ES2015)</h3>
+            <p>ES6 fue un cambio revolucionario que introdujo muchas características nuevas:</p>
+            <ul>
+                <li>Clases y módulos</li>
+                <li>Arrow functions</li>
+                <li>Variables let y const</li>
+                <li>Template literals</li>
+                <li>Parámetros por defecto</li>
+                <li>Desestructuración</li>
+                <li>Promesas</li>
+            </ul>
+            
+            <h3>ES6 (ES2015) vs ES2016+</h3>
+            <p>Las versiones posteriores a ES6 han sido más incrementales, agregando características específicas:</p>
+            <ul>
+                <li>ES2016: Operador de exponenciación y Array.includes</li>
+                <li>ES2017: Async/await y Object.entries/values</li>
+                <li>ES2018: Operadores rest/spread para objetos</li>
+                <li>ES2020: Optional chaining y nullish coalescing</li>
+                <li>ES2022: Campos y métodos privados en clases</li>
+            </ul>
+        </section>
+        
+        <section id="ejemplos">
+            <h2>Ejemplos de características por versión</h2>
+            
+            <h3>ECMAScript 5 (2009) <span class="version-tag">ES5</span></h3>
+            <div class="feature-card">
+                <div class="feature-title">"use strict"</div>
+                <p>El modo estricto ayuda a capturar errores comunes y acciones inseguras:</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>"use strict";
+
+x = 3.14; // Lanza un error porque x no está declarado
+function withStrictMode() {
+    y = 3.14; // También lanza error
+}</code></pre>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-title">Métodos de Array</div>
+                <p>Nuevos métodos para arrays como forEach, map, filter, reduce, etc.</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>var numbers = [1, 2, 3, 4, 5];
+
+// forEach
+numbers.forEach(function(num) {
+    console.log(num);
+});
+
+// map
+var squares = numbers.map(function(num) {
+    return num * num;
+});
+
+// filter
+var evens = numbers.filter(function(num) {
+    return num % 2 === 0;
+});</code></pre>
+            </div>
+            
+            <h3>ECMAScript 6 (2015) <span class="version-tag">ES6</span></h3>
+            <div class="feature-card">
+                <div class="feature-title">Arrow Functions</div>
+                <p>Sintaxis más concisa para funciones y manejo léxico de <code>this</code>.</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>// ES5
+var multiply = function(a, b) {
+    return a * b;
+};
+
+// ES6
+const multiply = (a, b) => a * b;
+
+// Con this léxico
+function Person() {
+    this.age = 0;
+    
+    // ES5 necesitaba bind(this) o var self = this
+    setInterval(() => {
+        this.age++; // this se refiere al objeto Person
+    }, 1000);
+}</code></pre>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-title">Template Literals</div>
+                <p>Interpolación de strings y strings multilínea.</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>const name = "Alice";
+const age = 28;
+
+// ES5
+console.log("Hola " + name + ", tienes " + age + " años.");
+
+// ES6
+console.log(`Hola ${name}, tienes ${age} años.`);
+
+// Multilínea
+const message = `
+  Hola ${name},
+  
+  Gracias por unirte a nuestro servicio.
+  Tu edad registrada es: ${age}.
+  
+  Saludos,
+  El equipo
+`;</code></pre>
+            </div>
+            
+            <h3>ECMAScript 2016 (ES7) <span class="version-tag">ES7</span></h3>
+            <div class="feature-card">
+                <div class="feature-title">Operador de exponenciación</div>
+                <p>Nuevo operador para cálculos exponenciales.</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>// ES5
+Math.pow(2, 3); // 8
+
+// ES7
+2 ** 3; // 8
+
+// También funciona con asignación
+let num = 2;
+num **= 3; // num ahora es 8</code></pre>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-title">Array.prototype.includes</div>
+                <p>Método más legible para verificar si un array contiene un elemento.</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>const colors = ['red', 'green', 'blue'];
+
+// ES5
+if (colors.indexOf('green') !== -1) {
+    console.log('Tiene verde');
+}
+
+// ES7
+if (colors.includes('green')) {
+    console.log('Tiene verde');
+}</code></pre>
+            </div>
+            
+            <h3>ECMAScript 2017 (ES8) <span class="version-tag">ES8</span></h3>
+            <div class="feature-card">
+                <div class="feature-title">Async/Await</div>
+                <p>Sintaxis más limpia para trabajar con promesas.</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>// ES6 con Promesas
+function fetchData() {
+    return fetch('https://api.example.com/data')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+}
+
+// ES8 con async/await
+async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+            </div>
+            
+            <h3>ECMAScript 2020 (ES11) <span class="version-tag">ES11</span></h3>
+            <div class="feature-card">
+                <div class="feature-title">Optional Chaining</div>
+                <p>Acceso seguro a propiedades anidadas sin errores si una intermedia es null/undefined.</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>const user = {
+    profile: {
+        name: "Alice",
+        address: {
+            city: "Madrid"
+        }
+    }
+};
+
+// ES5
+const city = user && user.profile && user.profile.address && user.profile.address.city;
+
+// ES2020
+const city = user?.profile?.address?.city;</code></pre>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-title">Nullish Coalescing</div>
+                <p>Operador para valores por defecto que solo considera null/undefined (no otros falsy values).</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>// ES5
+const value = settings.option || 'default';
+
+// Problema: si option es 0 o '', igual usa 'default'
+
+// ES2020
+const value = settings.option ?? 'default';
+// Solo usa 'default' si option es null o undefined</code></pre>
+            </div>
+            
+            <h3>ECMAScript 2022 (ES13) <span class="version-tag">ES13</span></h3>
+            <div class="feature-card">
+                <div class="feature-title">Campos y métodos privados en clases</div>
+                <p>Sintaxis para declarar miembros privados en clases usando #.</p>
+                
+                <div class="code-header">JavaScript</div>
+                <pre><code>class Counter {
+    #count = 0; // Campo privado
+    
+    #increment() { // Método privado
+        this.#count++;
+    }
+    
+    get value() {
+        return this.#count;
+    }
+    
+    tick() {
+        this.#increment();
+    }
+}
+
+const counter = new Counter();
+counter.tick();
+console.log(counter.value); // 1
+console.log(counter.#count); // Error: campo privado</code></pre>
+            </div>
+        </section>
+        
+        <section id="conclusion">
+            <h2>Conclusión</h2>
+            <p>ECMAScript es el estándar que impulsa JavaScript, y su evolución ha transformado el lenguaje de una herramienta simple para interactuar con páginas web a un lenguaje de programación completo y robusto.</p>
+            
+            <p>Desde ES6 (2015), JavaScript ha experimentado una rápida evolución con nuevas características que mejoran la legibilidad, mantenibilidad y capacidad del código. Las versiones recientes siguen añadiendo funcionalidades útiles mientras mantienen la compatibilidad hacia atrás.</p>
+            
+            <p>Para los desarrolladores, es importante:</p>
+            <ul>
+                <li>Estar al tanto de las nuevas características</li>
+                <li>Entender la compatibilidad con los navegadores objetivo</li>
+                <li>Usar herramientas como Babel cuando sea necesario para mayor compatibilidad</li>
+                <li>Aprovechar las mejoras que hacen el código más limpio y expresivo</li>
+            </ul>
+            
+            <p>El futuro de ECMAScript sigue brillante, con propuestas activas para nuevas características que continuarán mejorando el lenguaje en los próximos años.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2023 Guía Completa de ECMAScript</p>
+        <p>Recurso educativo sobre el estándar JavaScript</p>
+    </footer>
+</body>
+</html>
