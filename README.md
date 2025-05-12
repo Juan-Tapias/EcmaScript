@@ -1,6 +1,9 @@
-# 📘 Guía Completa de ECMAScript
+<!-- Portada -->
+<h1 align="center">📘 Guía Completa de ECMAScript</h1>
+<p align="center"><strong>Autor: Juan Sebastián Martínez Tapias & Brigitte Claros Viola</strong></p>
+<p align="center">🧑‍💻 Un recurso educativo interactivo sobre el estándar de JavaScript</p>
 
-Una documentación visual, moderna e interactiva para conocer a fondo el estándar ECMAScript (base de JavaScript), su evolución, usos y nuevas funcionalidades.
+---
 
 ## 🧠 ¿Qué es ECMAScript?
 
@@ -33,27 +36,27 @@ Este proyecto explica de manera detallada:
 ├── index.html        # Página principal del tutorial
 ├── style.css         # Hoja de estilos moderna
 └── README.md         # Este archivo
-
+```
 ## 🚀 Cómo visualizar
 
 1. Clona el repositorio o descarga los archivos.
 2. Abre `index.html` en tu navegador favorito.
 3. ¡Disfruta de la experiencia interactiva y educativa!
 
-```
+---
 
 ## 🧩 Funcionalidades destacadas
 
-- 📅 Línea de tiempo con eventos animados
-- 💡 Tarjetas de características por versión
-- 💻 Ejemplos de código en modo oscuro
-- 🎨 Interfaz visual moderna con colores vibrantes y transiciones
+- 📅 Línea de tiempo con eventos animados  
+- 💡 Tarjetas de características por versión  
+- 💻 Ejemplos de código en modo oscuro  
+- 🎨 Interfaz visual moderna con colores vibrantes y transiciones  
 
 ---
 
 ## 📅 Línea del tiempo (destacado)
 
-Algunas versiones importantes:
+**Algunas versiones importantes:**
 
 | **Versión** | **Año** | **Novedades principales**                                       |
 |-------------|---------|------------------------------------------------------------------|
