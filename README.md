@@ -2,14 +2,6 @@
 
 Una documentación visual, moderna e interactiva para conocer a fondo el estándar ECMAScript (base de JavaScript), su evolución, usos y nuevas funcionalidades.
 
----
-
-## ✨ Vista previa
-
-![Vista previa del proyecto](https://via.placeholder.com/900x400.png?text=Gu%C3%ADa+Completa+de+ECMAScript)
-
----
-
 ## 🧠 ¿Qué es ECMAScript?
 
 > ECMAScript es la especificación estándar de lenguajes de programación publicada por ECMA International. JavaScript es su implementación más conocida.
